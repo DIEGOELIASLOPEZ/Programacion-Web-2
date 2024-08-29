@@ -1,0 +1,20 @@
+body{
+    background-color: #ff7304;
+    
+ 
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+h3{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+p{
+    font-weight: 500;
+}
+
+.ATP{
+    text-align: center;
+}
