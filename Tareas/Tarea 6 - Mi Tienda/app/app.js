@@ -1,5 +1,5 @@
 let carrito = [];
-
+//Se declaran las los Objetos tipo Json 
 let camisa = {
     nombre: "Camisa",
     precio: 300,
@@ -24,6 +24,8 @@ let sombrero = {
     cantidad: 0
 };
 
+
+// Funcion para mostrar las diferentes opciones que se pueden escoger, desde los 4 articulos como ver el carrtio y salir de este menu
 function menuArticulos() {
     return parseInt(prompt(`Seleccione el producto para agregar al carrito:
                                     1. Camisa $${camisa.precio}.
@@ -34,6 +36,9 @@ function menuArticulos() {
                                     6. Salir.`));
 }
 
+
+//Funcion para ver los productos ya agregados al carrtio con su respectiva cantidad(numero de productos seleccionados) con su precio respectivo dependiendo la cantidad de productos
+//fueron seleccionados como el precio total
 function verCarrito() {
     if (carrito.length === 0) {
         console.log("El carrito está vacío.");
@@ -56,16 +61,19 @@ function verCarrito() {
     }
 }
 
+//Funcion que sirve para ver que producto esta ya agregado al arreglo usando una funcion flecha
 function agregarProducto(producto) {
     let encontrado = carrito.find(objeto => objeto.nombre == producto.nombre);
     if (encontrado) {
-        encontrado.cantidad += 1; // Si el producto ya está en el carrito, solo aumenta la cantidad
+        encontrado.cantidad += 1; 
     } else {
-        producto.cantidad = 1; // Si el producto no está en el carrito, lo agrega con cantidad 1
+        producto.cantidad = 1; 
         carrito.push(producto);
     }
 }
 
+// junta las anteriores funciones establecidas, se realiza un bucle while, dentro se agrega la funcion de mostrar menu, usando la estrucutra de control switch agregamos de acuerdo a cada caso 
+// la funcion agregar producto con su respectivo objeto o dar la opcion de ver el carrito o salir =)
 function iniciarPrograma() {
     let continuar = true;
     while (continuar) {
