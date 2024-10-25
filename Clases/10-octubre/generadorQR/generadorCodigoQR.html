@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="input1">Nombre: </label>
+        <input type="text" id = "input1" required maxlength="255" placeholder="Ingresa un Nombre">
+        <label for="input2">Corre Electronico: </label>
+        <input type="text" id = "input2" required maxlength="35" placeholder="Ingresa un Correo Electronico">
+        <label for="input3">Institucion: </label>
+        <input type="text" id = "input3" list="InstitucionLista" required>
+        <datalist id = "InstitucionLista">
+            <option value="FES Aragon"></option>
+            <option value="FES Iztacala"></option>
+            <option value="FES Zaragonza"></option>
+            <option value="FES Acatlan"></option>
+        </datalist>
+
+    </div>
+</body>
+</html>
