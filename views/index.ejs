@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="icon" href="/LOGO-FES.png" type="logoFEs">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <form action="/add" method="POST">
+        <section class="Registros">
+            <h1>Registro</h1> <!-- Asegúrate de que sea h1 -->
+            
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            
+            <label for="account_number">Número de Cuenta:</label>
+            <input type="text" id="account_number" name="account_number" pattern="\d{9}" title="Numero de cuenta incorrecta" required>
+            <br>
+
+            <label for="career">Carrera:</label>
+            <select id="career" name="career" required>
+                <option value="">Seleccione una carrera</option>
+                <option value="Arquitectura">Arquitectura</option>
+                <option value="Comunicación y Periodismo">Comunicación y Periodismo</option>
+                <option value="Derecho">Derecho</option>
+                <option value="Diseño Industrial">Diseño Industrial</option>
+                <option value="Economía">Economía</option>
+                <option value="Ingeniería Civil">Ingeniería Civil</option>
+                <option value="Ingeniería Eléctrica y Electrónica">Ingeniería Eléctrica y Electrónica</option>
+                <option value="Ingeniería en Computación">Ingeniería en Computación</option>
+                <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+                <option value="Ingeniería Mecánica Eléctrica">Ingeniería Mecánica Eléctrica</option>
+                <option value="Pedagogía">Pedagogía</option>
+                <option value="Planificación para el desarrollo Agropecuario">Planificación para el desarrollo Agropecuario</option>
+                <option value="Relaciones Internacionales">Relaciones Internacionales</option>
+                <option value="Sociología">Sociología</option>
+            </select>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            
+            <button type="submit">Agregar</button>
+            <a href="/table"><button type="button">Usuarios Registrados</button></a>
+        </section>
+    </form>
+</body>
+</html>
